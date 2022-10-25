@@ -44,6 +44,12 @@ insert into TbPokemon value(
 insert into TbPokemon value(
 3, 'Venusaur', 80,  '', 80, 82, 83, 100, "Grass", 'Poison'
 );
+insert into TbPokemon value(
+4, 'Charmander', 39,  '', 52, 43, 60, 50, "Fire", ''
+);
+insert into TbPokemon value(
+5, 'Charmeleon', 58, '', 64, 58, 80, 65, "Fire", ''
+);
 
 select*from TbPokemon;
 
