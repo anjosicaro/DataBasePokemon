@@ -1,3 +1,82 @@
+use banco_teste;
+create table teste_funcionario(
+nome_funcionario varchar (100)
+);
+drop table teste_funcionario;
+drop table primeiro_teste;
+drop table funcioario_teste;
+create table funcionario_teste(
+id_funcionario int,
+nomefuncionario varchar (100),
+dataadmissao date
+
+);
+
+insert into funcionario_teste values (
+1,
+'Maria',
+'0000-00-00'
+);
+select*from funcionario_teste;
+
+create database consultorio_medico;
+use consultorio_medico;
+create table medico(
+id_medico int,
+nome_medico varchar (45),
+telefone_medico varchar (9)
+);
+insert into medico values(
+1,
+'Valeria',
+'000000000'
+);
+
+select*from medico;
+drop table medico;
+
+create table consulta(
+id_consulta int,
+dt_consulta datetime,
+fk_idmedico int,
+fk_idpaciente int,
+fk_idreceitamedica int
+);
+insert into consulta values (
+1,
+'0000-00-00 00:00:00',
+1,
+1,
+1
+);
+select*from consulta;
+
+create table paciente(
+id_paciente int,
+nmpaciente varchar (45),
+telefonepaciente varchar(9),
+convenio varchar(45)
+);
+
+insert into paciente values (
+1,
+'Tereza',
+'000000000',
+'Unimed'
+);
+insert into paciente values(
+2,
+'Josefa',
+'9999999',
+'unimed'
+);
+insert into paciente values(
+3,
+'Paloma',
+'9999999',
+'unimed'
+);
+select*from paciente;
 create database Pokemon;
 use Pokemon;
 create table Jogador(
@@ -50,6 +129,24 @@ insert into TbPokemon value(
 insert into TbPokemon value(
 5, 'Charmeleon', 58, '', 64, 58, 80, 65, "Fire", ''
 );
+insert into TbPokemon value(
+6, 'Charizard', 78, '', 84, 78, 109, 85, "Fire", 'Flying'
+);
+insert into TbPokemon value(
+7, 'Squirtle', 44, '', 48, 65, 50, 64, "water", ''
+);
+insert into TbPokemon value(
+8, 'Wartortle', 59, '', 63, 80, 65, 80, "water", ''
+);
+insert into TbPokemon value(
+9, 'Blastoise', 79, '', 83, 100, 85, 105, "water", ''
+);
+insert into TbPokemon value(
+11, 'Blastoise',45 , '', 30, 35, 20, 20, "bug", ''
+);
+insert into TbPokemon value(
+15, 'Kakuna', 45, '', 25, 50, 25, 25, "bug", 'Poison'
+);
 
 select*from TbPokemon;
 
@@ -58,4 +155,7 @@ pk_idfazenda int,
 fk_idpokemon int,
 fk_idjogador int,
 quantidade_pokemon int
+);
+insert into Fazenda value(
+1, 2, 3, 1045
 );
